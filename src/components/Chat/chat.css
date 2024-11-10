@@ -1,0 +1,245 @@
+.chat {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+          font-size: 15px;
+          font-weight: lighter;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          color: #a5a5a5;
+
+          margin: 0;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .center::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .center::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+  }
+
+  .center::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #599292;
+  }
+
+  .center {
+    padding: 20px;
+    flex: 1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .message {
+      max-width: 1200px;
+      display: flex;
+      gap: 20px;
+
+      &.own {
+        align-self: flex-end;
+
+        .texts p {
+          background-color: rgb(137, 202, 255);
+        }
+        span {
+          text-align: right;
+        }
+      }
+
+      img {
+        margin-top: 7px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .sent-image {
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .texts {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        p {
+          padding: 20px;
+          background-color: rgba(173, 216, 230, 0.585);
+          border-radius: 10px;
+          font-family: "Fredoka", "sans-serif";
+          font-size: large;
+        }
+
+        span {
+          font-size: 13px;
+          font-family: "Fredoka", "sans-serif";
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+
+    box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    .icons {
+      display: flex;
+      gap: 20px;
+    }
+    .icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      color: rgb(38, 36, 36);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: "Fredoka", "sans-serif";
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .emoji {
+      position: relative;
+
+      .picker {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+      }
+    }
+
+    .sendButton {
+      background-color: rgb(24, 24, 24);
+      color: rgb(255, 255, 255);
+      padding: 18px 18px;
+      border: black;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+    }
+  }
+}
+
+.typing-status {
+  font-style: italic;
+  color: gray;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.typing-indicator {
+  display: inline-flex;
+  align-items: center;
+}
+
+.typing-text {
+  margin-right: 5px;
+}
+
+.typing-dots span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 1px;
+  background-color: #666;
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 1.4s infinite both;
+}
+
+.typing-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}

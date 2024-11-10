@@ -1,0 +1,26 @@
+.list {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.listContainer {
+  height: 500px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.listContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.listContainer::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #599292;
+}

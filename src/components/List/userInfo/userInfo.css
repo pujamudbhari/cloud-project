@@ -1,0 +1,38 @@
+.userInfo {
+  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInfo h2 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.userInfo .user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userInfo .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.userInfo .icons {
+  display: flex;
+  gap: 20px;
+}
+
+.userInfo .icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

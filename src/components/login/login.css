@@ -1,0 +1,13 @@
+.login-container>h2{
+    margin-bottom: 20px;
+    color: rgb(52, 121, 121);
+    font-family: "Fredoka", sans-serif;
+}
+
+.login-container{
+    padding:  2em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(255, 255, 255, 0.449);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
